@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<h1>Sign Up Form</h1>
+<form action="/register" method="POST">
+    <div class="ui massive form">
+      <div class="two fields">
+        <div class="field">
+          <label>Username</label>
+          <input placeholder="Username" type="text" name="username">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Password" type="password" name="password">
+        </div>
+      </div>
+      <button class="big ui primary button">SIGN UP!</button>
+    </div>
+</form>
+
+
+<% include ./partials/footer %>

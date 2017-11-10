@@ -1,0 +1,31 @@
+.code{
+    font-size: 2em;
+}
+.icon{
+    font-size: 1.25em;
+}
+
+#love-u{
+  margin-top: 10px;
+  padding-bottom: 55px;
+  position: relative;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.ui.massive.form{
+  margin: 30px;
+}
+
+#delete {
+  display: inline;
+}

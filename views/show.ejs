@@ -1,0 +1,59 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header"><%= blog.title %></div>
+        <div class="ui top attached segment">
+            <div class="item">
+                <img class="ui centered rounded image" src="<%= blog.image %>" />
+            </div>
+            <div class="content">
+                 <span>Date: <%= blog.date.toDateString() %></span>
+            </div>
+            <div class="description">
+               <p><%- blog.body %></p>
+            </div>
+            <a class="ui inverted yellow button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+            <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                  <button class="ui inverted red button">Delete</button>
+            </form>
+        </div>
+    <div class="ui comments">
+        <h3 class="ui dividing header">Comments</h3>
+            <div class="comment">
+              <form class="ui reply form" action="/blogs/<%= blog._id %>/comments" method="POST">
+                <div class="field">
+                    <input type="text" name="comment[author]" placeholder="Author">
+                </div>
+                <div class="field">
+                  <textarea name="comment[text]" placeholder="Write your opinion"></textarea>
+                </div>
+                <div class="inline field">
+                  <button class="ui inverted green button"><i class="icon edit"></i>Leave your comment</button>
+                  <div class="ui left pointing red basic label">
+                       <i class="warning circle icon"></i>Please log in or sign up first before comment anything!<br> Otherwise you will lose your current comment.
+                  </div>
+                </div>
+              </form>
+            </div>
+    </div>
+    <div class="ui comments">
+        <div class="comment">
+                <% blog.comments.forEach(function(comment){ %>
+                    <a class="avatar">
+                      <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author"><%= comment.author %></a>
+                        <div class="metadata">
+                            <span class="date"><%= comment.date.toDateString() %></span>
+                        </div>
+                        <div class="text">
+                            <p><%= comment.text %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            
+        </div>
+    </div>
+
+<% include ./partials/footer %>

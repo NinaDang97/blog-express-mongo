@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                Blog App
+            </title>
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+            <link rel="stylesheet" type="text/css" href="/stylesheet/app.css">
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+        </head>
+        <body>
+            <div class="ui inverted segment" style="margin: 0px">
+              <div class="ui inverted secondary pointing menu">
+                <div class="header item"><i class="code icon"></i>
+                Blog Site</div>
+                <a href="/" class="item">
+                <i class="home icon"></i>
+                  Home
+                </a>
+                <a href="/blogs/new" class="item">
+                <i class="add circle icon"></i> 
+                  New Post
+                </a>
+                <div class="right menu">
+                  <% if(!currentUser){ %>
+                    <a class="ui item" href="/login">LogIn</a>
+                    <a class="ui item" href="/register">SignUp</a>
+                  <% } else{ %>
+                    <a class="ui item" href="#">Hey, <%= currentUser.username %>!</a>
+                    <a class="ui item" href="/logout">LogOut</a>
+                  <% } %>
+                </div>
+              </div>
+              
+            </div>
+            <div id="love-u">

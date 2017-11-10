@@ -1,0 +1,28 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <h2 class="ui center aligned icon header">
+      <i class="edit icon"></i>
+      Edit Post<br>
+      <%= blog.title %>
+    </h2>
+    <!-- It's optional define any route: OR
+    `/blogsupdate/<%= blog._id %>` -->
+    <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST" class="ui form">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="title" value="<%= blog.title %>">
+        </div>    
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" placeholder="image url" value="<%= blog.image %>">
+        </div>    
+        <div class="field"> 
+            <label>Blog Content</label>
+            <textarea name="blog[body]"><%= blog.body %></textarea>
+        </div>
+      <button class="ui inverted big violet button">Submit</button>
+    </form>
+</div>
+
+<% include ./partials/footer %>

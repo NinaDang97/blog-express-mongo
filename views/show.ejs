@@ -11,7 +11,9 @@
             </div>
             <div class="description">
                <p><%- blog.body %></p>
+               <p><em>Posted By <%= blog.author.username %></em></p>
             </div>
+            
             <a class="ui inverted yellow button" href="/blogs/<%= blog._id %>/edit">Edit</a>
             <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
                   <button class="ui inverted red button">Delete</button>
@@ -22,10 +24,7 @@
             <div class="comment">
               <form class="ui reply form" action="/blogs/<%= blog._id %>/comments" method="POST">
                 <div class="field">
-                    <input type="text" name="comment[author]" placeholder="Author">
-                </div>
-                <div class="field">
-                  <textarea name="comment[text]" placeholder="Write your opinion"></textarea>
+                  <textarea name="text" placeholder="Write your opinion"></textarea>
                 </div>
                 <div class="inline field">
                   <button class="ui inverted green button"><i class="icon edit"></i>Leave your comment</button>
@@ -43,7 +42,7 @@
                       <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
                     </a>
                     <div class="content">
-                        <a class="author"><%= comment.author %></a>
+                        <a class="author"><%= comment.author.username %></a>
                         <div class="metadata">
                             <span class="date"><%= comment.date.toDateString() %></span>
                         </div>

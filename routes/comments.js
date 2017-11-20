@@ -12,7 +12,14 @@ router.post("/:id/comments", isLoggedIn, function(req, res){
             console.log(err);
             res.redirect("/blogs");
         } else{
-            Comment.create(req.body.comment, function(err, newComment){
+            var addedComment = {
+                text: req.body.text,
+                author: {
+                    id: req.user._id,
+                    username: req.user.username
+                }
+            };
+            Comment.create(addedComment, function(err, newComment){
                 if(err){
                     console.log(err);
                 } else{

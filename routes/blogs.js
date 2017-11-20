@@ -1,5 +1,5 @@
 var express = require("express");
-var router = express.Router();
+var router = express.Router({mergeParams: true});
 var Blog = require("../models/blog");
 
 
@@ -27,6 +27,10 @@ router.post("/", isLoggedIn, function(req, res){
         if(err){
             res.render("new");
         } else{
+            newBlog.author.id = req.user._id;
+            newBlog.author.username = req.user.username;
+            newBlog.save();
+            
             //redirect to index
             res.redirect("/blogs");
         }
@@ -71,7 +75,7 @@ router.put("/:id", isLoggedIn, function(req, res){
 });
 
 // DELETE ROUTE
-router.delete("/:id/comments", isLoggedIn, function(req, res){
+router.delete("/:id", isLoggedIn, function(req, res){
     //destroy blog
     Blog.findByIdAndRemove(req.params.id, function(err){
         if(err){

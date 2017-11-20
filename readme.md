@@ -76,5 +76,6 @@ npm install --save
 * login
 * logout
 * hide/show links if user has logged in or not
+* Authenticated author
 
 #### Inspired by Steel Colt - Web Development Bootcamp in Udemy

@@ -1,6 +1,6 @@
 # blog-app (10/2017)
  
-### Description:
+## Description:
 - A simple blog app where anybody can write down anything helpful and everyone can view. Implemented and UX improved by security authentication and authorization.
 - Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
@@ -22,7 +22,7 @@ npm install --save
 - passport-local-mongoose
 - express-session
 
-### Simple guideline from scratch
+## Simple guideline from scratch
 
  1. The differences between Authentication and Authorization:
  - Authentication: get people signup/login. In other words, people need to tell app/website who they are.
@@ -31,34 +31,34 @@ npm install --save
  2. How To Do?
  - Hint: Verify the id of current user with id of author who creates the post
 
-# Blog Index
+### Blog Index
 * Setup the Blog App
 * Create the Blog model
 * Add INDEX route and template
 * Add Simple Nav Bar
 
 ----------------------------------------------
-## Basic Layout
+### Basic Layout
 * Add Header and Footer Partials
 * Include Semantic UI
 * Add Simple Nav
 
 ---------------------------------------------
-## Putting the C in CRUD
+### Putting the C in CRUD
 * Add NEW route
 * Add NEW template
 * Add CREATE route
 * Add CREATE template
 
 ----------------------------------------------
-## SHOW
+### SHOW
 * Add SHOW route
 * Add SHOW template
 * Add links to show page
 * Style show template
 
 -----------------------------------------------
-## Edit/Update
+### Edit/Update
 * Add EDIT route
 * Add EDIT form
 * Add UPDATE route
@@ -66,22 +66,22 @@ npm install --save
 * Add Method-Override
 
 ------------------------------------------------
-## DESTROY
+### DESTROY
 * Add Method-Override
 * Add EDIT and DESTROY links
 
 -----------------------------------------
-## Optional updated
+### Optional updated
 * Sanitize blog body
 * Style Index
 
 ------------------------------------------
-## Create comments
+### Create comments
 * Update/Edit route + form
 * Destroy route
 
 ---------------------------------------
-## Create Authentication 
+### Create Authentication 
 * register
 * login
 * logout
@@ -89,7 +89,7 @@ npm install --save
 * Authenticated author
 
 ---------------------------------------
-## Finalize by adding Authorization
+### Finalize by adding Authorization
 * User can only edit his/her campground
 * User can only delete his/her campground
 * Hide/Show edit and delete buttons

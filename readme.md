@@ -1,7 +1,7 @@
 # blog-app (10/2017)
  
 ### Description:
-A simple blog app where anybody can write down anything that helpful and everyone can view. 
+A simple blog app where anybody can write down anything helpful and everyone can view. Implemented and UX improved by security authentication and authorization.
 Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
 ### Setup MongoDB
@@ -21,6 +21,8 @@ npm install --save
 - passport-local
 - passport-local-mongoose
 - express-session
+
+### Simple guideline from scratch
 
 # Blog Index
 * Setup the Blog App
@@ -62,13 +64,14 @@ npm install --save
 * Add EDIT and DESTROY links
 
 -----------------------------------------
-## Final Updates
+## Optional updated
 * Sanitize blog body
 * Style Index
-* Update REST Table
 
 ------------------------------------------
 ## Create comments
+* Update/Edit route + form
+* Destroy route
 
 ---------------------------------------
 ## Create Authentication 
@@ -77,5 +80,11 @@ npm install --save
 * logout
 * hide/show links if user has logged in or not
 * Authenticated author
+
+---------------------------------------
+## Finalize by adding Authorization
+* User can only edit his/her campground
+* User can only delete his/her campground
+* Hide/Show edit and delete buttons
 
 #### Inspired by Steel Colt - Web Development Bootcamp in Udemy

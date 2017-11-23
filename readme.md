@@ -45,27 +45,23 @@ npm install --save
 * Add INDEX route and template
 * Add Simple Nav Bar
 
-----------------------------------------------
 ### Basic Layout
 * Add Header and Footer Partials
 * Include Semantic UI
 * Add Simple Nav
 
----------------------------------------------
 ### Putting the C in CRUD
 * Add NEW route
 * Add NEW template
 * Add CREATE route
 * Add CREATE template
 
-----------------------------------------------
 ### SHOW
 * Add SHOW route
 * Add SHOW template
 * Add links to show page
 * Style show template
 
------------------------------------------------
 ### Edit/Update
 * Add EDIT route
 * Add EDIT form
@@ -73,22 +69,18 @@ npm install --save
 * Add UPDATE form
 * Add Method-Override
 
-------------------------------------------------
 ### DESTROY
 * Add Method-Override
 * Add EDIT and DESTROY links
 
------------------------------------------
 ### Optional updated
 * Sanitize blog body
 * Style Index
 
-------------------------------------------
 ### Create comments
 * Update/Edit route + form
 * Destroy route
 
----------------------------------------
 ### Create Authentication 
 * register
 * login
@@ -96,7 +88,6 @@ npm install --save
 * hide/show links if user has logged in or not
 * Authenticated author
 
----------------------------------------
 ### Finalize by adding Authorization
 * User can only edit his/her campground
 * User can only delete his/her campground

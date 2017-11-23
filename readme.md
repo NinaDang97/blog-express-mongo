@@ -1,8 +1,8 @@
 # blog-app (10/2017)
  
 ### Description:
-A simple blog app where anybody can write down anything helpful and everyone can view. Implemented and UX improved by security authentication and authorization.
-Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
+- A simple blog app where anybody can write down anything helpful and everyone can view. Implemented and UX improved by security authentication and authorization.
+- Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
 ### Setup MongoDB
 * If built with [cloud 9](https://community.c9.io/t/setting-up-mongodb/1717) 
@@ -23,7 +23,11 @@ npm install --save
 - express-session
 
 ### Simple guideline from scratch
-
+ ```
+ The differences between Authentication and Authorization:
+ - Authentication: get people signup/login. In other words, people need to tell app/website who they are.
+ - Authorization: Once figure out who user is, grant permission on specific things they are allowed to do.
+ ```
 # Blog Index
 * Setup the Blog App
 * Create the Blog model

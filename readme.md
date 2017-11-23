@@ -29,8 +29,15 @@ npm install --save
  - Authorization: Once figure out who user is, grant permission on specific things they are allowed to do.
  
  2. How To Do?
- - Hint: Verify the id of current user with id of author who creates the post
+ - Hint: 
+   + Verify the id of current user with id of author who creates the post
    + However, id of current user - a string (req.user._id) is different than id of author (foundBlog.author.id) - a mongoose object
+   + Instead of using: if(req.user._id === foundBlog.author.id). We use:
+   ```
+   if(foundBlog.author.id.equals(req.user._id)){
+                  ...
+          }
+   ```
 
 ### Blog Index
 * Setup the Blog App

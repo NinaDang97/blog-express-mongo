@@ -24,9 +24,12 @@ npm install --save
 
 ### Simple guideline from scratch
  ```
- The differences between Authentication and Authorization:
+ ## The differences between Authentication and Authorization:
  - Authentication: get people signup/login. In other words, people need to tell app/website who they are.
  - Authorization: Once figure out who user is, grant permission on specific things they are allowed to do.
+ 
+ ## How To Do?
+ - Hint: Verify the id of current user with id of author who creates the post
  ```
 # Blog Index
 * Setup the Blog App

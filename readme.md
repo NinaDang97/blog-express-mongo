@@ -30,7 +30,7 @@ npm install --save
  
  2. How To Do?
  - Hint: Verify the id of current user with id of author who creates the post
-   + However, id of current user (req.user._id) is different than id of author (foundBlog.author.id)!
+   + However, id of current user - a string (req.user._id) is different than id of author (foundBlog.author.id) - a mongoose object
 
 ### Blog Index
 * Setup the Blog App

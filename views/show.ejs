@@ -14,10 +14,12 @@
                <p><em>Posted By <%= blog.author.username %></em></p>
             </div>
             
-            <a class="ui inverted yellow button" href="/blogs/<%= blog._id %>/edit">Edit</a>
-            <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
-                  <button class="ui inverted red button">Delete</button>
-            </form>
+            <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
+                <a class="ui inverted yellow button" href="/blogs/<%= blog._id %>/edit">Edit</a>
+                <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                      <button class="ui inverted red button">Delete</button>
+                </form>
+            <% } %>
         </div>
     <div class="ui comments">
         <h3 class="ui dividing header">Comments</h3>

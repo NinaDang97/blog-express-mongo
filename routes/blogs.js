@@ -51,7 +51,7 @@ router.get("/:id", function(req, res) {
 })
 
 //EDIT ROUTE
-router.get("/:id/edit", isLoggedIn, function(req, res) {
+router.get("/:id/edit", checkPostAuthor, function(req, res) {
     Blog.findById(req.params.id, function(err, foundBlog){
         if(err){
             res.redirect("/blogs");
@@ -62,7 +62,7 @@ router.get("/:id/edit", isLoggedIn, function(req, res) {
 });
 
 //PUT ROUTE
-router.put("/:id", isLoggedIn, function(req, res){
+router.put("/:id", checkPostAuthor, function(req, res){
     req.body.blog.body = req.sanitize(req.body.blog.body);
     //Blog.findByIdAndUpdate(id, new data, callback)
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
@@ -75,7 +75,7 @@ router.put("/:id", isLoggedIn, function(req, res){
 });
 
 // DELETE ROUTE
-router.delete("/:id", isLoggedIn, function(req, res){
+router.delete("/:id", checkPostAuthor, function(req, res){
     //destroy blog
     Blog.findByIdAndRemove(req.params.id, function(err){
         if(err){
@@ -93,6 +93,25 @@ function isLoggedIn(req, res, next){
         return next();
     }
     res.redirect("/login");
+}
+
+//add another middleware for checking authorization
+function checkPostAuthor(req, res, next){
+    if(req.isAuthenticated()){
+        if(Blog.findById(req.params.id, function(err, foundBlog) {
+            if(err){
+                res.redirect("/blogs");
+            } else{
+                if(req.user._id.equals(foundBlog.author.id)){
+                    next();
+                } else{
+                    res.redirect("back");
+                }
+            }
+        }));
+    } else {
+        res.redirect("back");
+    }
 }
 
 module.exports = router;

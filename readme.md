@@ -93,4 +93,8 @@ npm install --save
 * User can only delete his/her campground
 * Hide/Show edit and delete buttons
 
+### Authorization for Post + Comment
+
+### Refactor of Models, Views and Middleware
+
 #### Inspired by Steel Colt - Web Development Bootcamp in Udemy

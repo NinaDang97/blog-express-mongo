@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <h2 class="ui center aligned icon header">
+      <i class="edit icon"></i>
+      Edit Comment<br>
+    </h2>
+    <div class="ui comments"
+            <div class="comment">
+              <form class="ui reply form" action="/blogs/<%= blog_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                <div class="field">
+                  <textarea name="comment[text]" placeholder="Write your opinion"><%= comment.text %></textarea>
+                </div>
+                <div class="inline field">
+                  <button class="ui inverted green button"><i class="icon edit"></i>Update your comment</button>
+                </div>
+              </form>
+            </div>
+    </div>
+    
+</div>
+
+<% include ./partials/footer %>

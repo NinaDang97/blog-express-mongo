@@ -51,6 +51,15 @@
                         <div class="text">
                             <p><%= comment.text %></p>
                         </div>
+                        <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                            <div class="mini ui buttons">
+                                <a href="/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit" class="mini ui yellow button">Edit</a>
+                                <div class="or" data-text="or"></div>
+                                <form action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                    <button class="mini ui red button">Delete</button>
+                                </form>
+                            </div>
+                        <% } %>
                     </div>
                 <% }) %>
             

@@ -13,10 +13,11 @@ npm install --save
 ```
 - express (Server-side Javascript)
 - ejs (Embedded Javascript)
-- express-sanitizer
+- express-sanitizer (middleware after initilize `body-parser` for node-validation) 
 - body-parser 
 - mongoose (mongoDB for Express version)
 - method-override (used for method PUT and DELETE in RESTful ROUTE that form type in cliend-side doesn't support
+- connect-flash (middleware: store message displayed for user once and cleared after page being refreshed)
 - passport
 - passport-local
 - passport-local-mongoose
@@ -96,5 +97,8 @@ npm install --save
 ### Authorization for Post + Comment
 
 ### Refactor of Models, Views and Middleware
+
+### Flash Message Adding
+* Install and configure connect-flash
 
 #### Inspired by Steel Colt - Web Development Bootcamp in Udemy

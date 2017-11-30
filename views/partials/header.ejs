@@ -34,4 +34,12 @@
               </div>
               
             </div>
+            
+            <% if(error && error.length > 0){%>
+            <div class="ui red message"><%= error %></div>
+            <% } %>
+            <% if(success && success.length > 0){%>
+            <div class="ui floating message"><%= success %></div>
+            <% } %>
             <div id="love-u">
+               

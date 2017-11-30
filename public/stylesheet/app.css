@@ -5,6 +5,12 @@
     font-size: 1.25em;
 }
 
+.ui.message{
+    width: 50%;
+    position: relative;
+    left: 25%;  
+}
+
 #love-u{
   margin-top: 10px;
   padding-bottom: 55px;

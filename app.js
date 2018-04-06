@@ -57,6 +57,11 @@ app.get("/", function(req, res){
     res.redirect("blogs");
 });
 
+//In cloud9
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("SERVER IS STARTED");
 })
+//Otherwise run locally
+// app.listen(3000, function(){
+//     console.log("SERVER IS STARTED");
+// })

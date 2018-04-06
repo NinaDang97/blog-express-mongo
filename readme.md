@@ -6,10 +6,14 @@ Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubu
 
 ### Setup MongoDB
 * If built with [cloud 9](https://community.c9.io/t/setting-up-mongodb/1717) 
-
+* If built locally and run with real mongoDB, you need to have (https://mlab.com) account and name your database blog (for example) as well as dbuser and dbpassword: 
+```
+mongoose.connect("mongodb://dbuser:dbpassword@ds000000.mlab.com:00000/blog", {useMongoClient: true});
+```
 ### NPM Install
 ```
-npm install --save 
+npm install  
+node app.js
 ```
 - express (Server-side Javascript)
 - ejs (Embedded Javascript)
